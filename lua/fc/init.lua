@@ -13,13 +13,13 @@ function M._check_fc()
         -- This is required in environments like git-bash on windows since &shell will be cmd/powershell
         M._shell = { "bash", "-c" }
         M._setup_fc_environment()
+    elseif string.match(vim.fn.argv(0), "zsh") then
+        M._shell = { "zsh", "-c" }
+        M._setup_fc_environment()
     end
 end
 
 function M._setup_fc_environment()
-    -- TODO: for testing, remove
-    M._shell = { "bash", "-c" }
-
     -- Main editing window
     M._editor_win = vim.api.nvim_get_current_win()
     M._editor_buf = vim.api.nvim_win_get_buf(M._editor_win)

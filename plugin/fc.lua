@@ -5,5 +5,5 @@ augroup FcNvim
 augroup END
 
 " For Dev
-nnoremap ,fc :tabnew C:\Temp\fctest <bar> lua R("fc")._setup_fc_environment()<cr>
+nnoremap ,fc :tabnew C:\Temp\fctest <bar> lua R("fc")._setup_fc_environment(); require"fc"._shell = {"bash", "-c"}<cr>
 ]]
