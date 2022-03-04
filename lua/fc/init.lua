@@ -3,8 +3,9 @@ local M = {};
 function M.setup()
 end
 
--- TODO: add a way to force re-run?
--- TODO: unit testing, documentation
+-- TODO: (?) add a way to force re-run on a command
+-- TODO: unit testing
+-- TODO: configuration, documentation
 
 function M._check_fc()
     -- TODO: wait for vim to add better detection, and support more shell+os combos
